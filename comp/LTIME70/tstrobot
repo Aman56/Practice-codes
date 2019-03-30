@@ -1,0 +1,14 @@
+# cook your dish here
+t=int(input())
+for i in range(t):
+    n,x=map(int,input().split())
+    s=input()
+    c=[x]
+    for i in s:
+        if(i=='R'):
+            x=x+1
+        else:
+            x=x-1
+        if(x not in c):
+            c.append(x)
+    print(len(c))
