@@ -1,0 +1,12 @@
+n=int(input())
+i=10
+add=0
+while(n!=0):
+    p=n%10
+    add=add+p*i
+    n=int(n/10)
+    i=i-1
+if(add%11==0):
+    print("Legal ISBN")
+else:
+    print("Illegal ISBN")
