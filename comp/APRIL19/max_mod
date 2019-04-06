@@ -1,0 +1,25 @@
+def maxModValue(arr, n):  
+  
+    ans = 0
+    arr = sorted(arr)  
+  
+    for j in range(n - 1, 0, -1):    
+        if (ans >= arr[j]): 
+            break
+        if (arr[j] == arr[j-1]) : 
+            continue
+        i = 2*arr[j] 
+        while(i <= arr[n - 1] + arr[j]): 
+            ind = 0
+            for k in range(len(arr)+1): 
+                if k != i: 
+                    ind = k
+                    ans = max(ans, arr[ind-1] % arr[j]) 
+             
+            i += arr[j] 
+  
+    return ans 
+
+n=int(input())
+arr=[int(x) for x in input().split()]
+print(maxModValue(arr, n))
