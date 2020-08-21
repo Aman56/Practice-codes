@@ -1,3 +1,4 @@
+# Multiple functions to accomplish tasks.
 import math
 def carbohydrate():
     h=int(input(("No. of H atoms: ")))
