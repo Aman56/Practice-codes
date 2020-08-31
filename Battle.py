@@ -1,3 +1,4 @@
+
 def battle():
     t=int(input())
     for k in range(t):
@@ -16,5 +17,3 @@ def battle():
             print("-1")
         else:
             print(temp)
-
-
